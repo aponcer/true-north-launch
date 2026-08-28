@@ -1,75 +1,40 @@
-# Nuxt Minimal Starter
+# 🎵 True North — Official Landing Page
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+> A modern, ultra-fast, and responsive landing page for the music duo **True North**. Built with Nuxt 3, Vue 3, and Tailwind CSS.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## ✨ Features
+
+- **High Performance & SSG:** Fully pre-rendered static site optimized for edge delivery (Cloudflare Pages / Vercel).
+- **Custom Typography:** Integrated local OpenType (`.otf`) fonts for brand typography (_Agrandir_).
+- **Lazy-loaded Media:** Optimized YouTube player embed for single releases without blocking critical render path.
+- **Responsive Layout:** Tailored profile cards and adaptive hero section for mobile, tablet, and desktop viewports.
+- **Dynamic Content Structure:** Centralized site data (`siteData.ts`) for quick configuration of release links, social channels, and media paths.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Nuxt 3](https://nuxt.com/) (Vue 3 + TypeScript)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Deployment:** Global CDN (Static Site Generation via `npm run generate`)
+- **Icons & Assets:** Native SVGs and WebP visual assets
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have Node.js (v18+) installed on your machine.
+
+### Installation
+
+Clone the repository and install dependencies:
 
 ```bash
-# npm
+git clone [https://github.com/aponcer/true-north-launch.git](https://github.com/aponcer/true-north-launch.git)
+cd true-north-launch
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
