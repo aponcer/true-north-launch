@@ -5,8 +5,8 @@
       
       <!-- Logo tipográfico con Agrandir -->
       <a href="#home" class="flex items-center gap-2 group py-1">
-        <span class="font-agrandir-wide text-2xl md:text-3xl tracking-tight text-white leading-none">
-          true north.
+        <span class="font-agrandir-wide text-2xl md:text-3xl tracking-tight text-white leading-none lowercase">
+          {{ siteData.artistName }}.
         </span>
       </a>
 
@@ -31,5 +31,5 @@
 </template>
 
 <script setup lang="ts">
-import { siteData } from '~/data/siteData';
+  const siteData = await useSiteData()
 </script>

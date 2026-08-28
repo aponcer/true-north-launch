@@ -121,15 +121,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { siteData } from '~/data/siteData';
+import { ref } from 'vue'
 
-const showPlayer = ref(false);
+const siteData = await useSiteData()
+const showPlayer = ref(false)
 
 const handleImageError = (event: Event) => {
-  const target = event.target as HTMLElement | null;
+  const target = event.target as HTMLElement | null
   if (target) {
-    target.style.display = 'none';
+    target.style.display = 'none'
   }
-};
+}
 </script>

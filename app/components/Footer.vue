@@ -32,5 +32,5 @@
 </template>
 
 <script setup lang="ts">
-import { siteData } from '~/data/siteData';
+  const siteData = await useSiteData()
 </script>

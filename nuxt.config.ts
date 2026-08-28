@@ -7,7 +7,11 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  nitro: {
+  /*nitro: {
     preset: "static",
+  },*/
+  runtimeConfig: {
+    jsonbinBinId: process.env.JSONBIN_BIN_ID || '',
+    jsonbinMasterKey: process.env.JSONBIN_MASTER_KEY || '',
   },
 });

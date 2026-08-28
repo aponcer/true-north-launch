@@ -9,7 +9,7 @@
           Behind The Music
         </span>
         <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">
-          About True North
+          About {{ siteData.artistName }}
         </h2>
         <p class="text-neutral-400 text-sm md:text-base font-light leading-relaxed">
           True North is a faith-driven duo blending soulful melodies, lush harmonies, and honest storytelling to create music that uplifts and reconnects.
@@ -77,3 +77,7 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const siteData = await useSiteData()
+</script>
