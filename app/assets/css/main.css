@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Grand Light */
+@font-face {
+  font-family: 'Agrandir Grand Light';
+  src: url('/fonts/Agrandir-GrandLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular */
+@font-face {
+  font-family: 'Agrandir Regular';
+  src: url('/fonts/Agrandir-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Wide Light */
+@font-face {
+  font-family: 'Agrandir Wide Light';
+  src: url('/fonts/Agrandir-WideLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Clases de utilidad para Tailwind */
+.font-agrandir-grand {
+  font-family: 'Agrandir Grand Light', sans-serif;
+}
+
+.font-agrandir-regular {
+  font-family: 'Agrandir Regular', sans-serif;
+}
+
+.font-agrandir-wide {
+  font-family: 'Agrandir Wide Light', sans-serif;
+}
+
+@theme {
+  --color-tn-pink: #e11d48;
+  --color-tn-orange: #f97316;
+  --color-tn-purple: #8b5cf6;
+  --color-tn-dark: #18181b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
