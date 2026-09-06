@@ -1,19 +1,31 @@
 <!-- components/Hero.vue -->
 <template>
   <section id="home" class="relative w-full min-h-screen bg-neutral-900 text-white flex flex-col justify-between overflow-hidden pt-16">
-    <!-- Background Image Asset -->
+    <!-- Background Image Asset Carousel -->
     <div class="absolute inset-0 z-0">
-      <img 
-        src="/images/main_big.webp" 
-        alt="True North Band Cover" 
-        class="w-full h-full object-cover object-center"
-      />
+      <div 
+        v-for="(image, index) in bgImages" 
+        :key="index"
+        class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+        :class="currentImageIndex === index ? 'opacity-100' : 'opacity-0'"
+      >
+        <picture>
+          <source media="(max-width: 767px)" :srcset="image.mobile" />
+          <source media="(min-width: 768px)" :srcset="image.desktop" />
+          <img 
+            :src="image.desktop" 
+            alt="True North Band Cover" 
+            class="w-full h-full object-cover object-top"
+          />
+        </picture>
+      </div>
+      
       <!-- Warm Gradient Overlay -->
-      <div class="absolute inset-0 bg-gradient-to-tr from-neutral-950/90 via-rose-950/60 to-amber-950/40 backdrop-blur-[2px]"></div>
+      <div class="absolute inset-0 bg-linear-to-tr from-neutral-950/90 via-rose-950/50 to-amber-950/30 z-10"></div>
     </div>
 
     <!-- Hero Main Content -->
-    <main class="relative z-10 max-w-4xl w-full mx-auto px-6 py-16 text-center my-auto flex flex-col items-center">
+    <main class="relative z-10 max-w-4xl w-full mx-auto px-6 pt-16 pb-6 text-center mt-auto mb-10 flex flex-col items-center">
       <span class="text-xs font-extrabold uppercase tracking-widest text-amber-300 mb-3 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/10">
         {{ siteData.location }} • Est. {{ siteData.yearStarted }}
       </span>
@@ -86,5 +98,31 @@
 </template>
 
 <script setup lang="ts">
+  import { ref, onMounted, onUnmounted } from 'vue'
+
   const siteData = await useSiteData()
+
+  const bgImages = [
+    {
+      desktop: '/images/True-North-Promo-Landscape.webp',
+      mobile: '/images/True-North-Promo-1.webp'
+    },
+    {
+      desktop: '/images/True-North-Summer-Landscape.webp',
+      mobile: '/images/True-North-Summer.webp'
+    }
+  ]
+
+  const currentImageIndex = ref(0)
+  let timer: ReturnType<typeof setInterval> | null = null
+
+  onMounted(() => {
+    timer = setInterval(() => {
+      currentImageIndex.value = (currentImageIndex.value + 1) % bgImages.length
+    }, 60000)
+  })
+
+  onUnmounted(() => {
+    if (timer) clearInterval(timer)
+  })
 </script>
