@@ -14,7 +14,7 @@ const siteData = await useSiteData()
 
 const requestUrl = useRequestURL()
 const canonicalUrl = `${requestUrl.origin}/`
-const ogImageUrl = `${requestUrl.origin}/images/true-north-cover.webp`
+const ogImageUrl = `${requestUrl.origin}/images/true-north-og.webp`
 
 // Configuración global de SEO / Open Graph (OG)
 useSeoMeta({
@@ -24,6 +24,8 @@ useSeoMeta({
   description: 'True North is a faith-driven duo blending soulful melodies, lush harmonies, and honest storytelling. Stream their latest single "True North" now.',
   ogDescription: 'We create soulful, faith-inspired music that connects, uplifts, and reminds you that you\'re never too far gone to find your way home.',
   ogImage: ogImageUrl,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
   ogImageAlt: `${siteData.artistName} Duo Cover`,
   ogUrl: canonicalUrl,
   ogType: 'website',

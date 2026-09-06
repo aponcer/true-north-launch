@@ -105,7 +105,7 @@
   const bgImages = [
     {
       desktop: '/images/True-North-Promo-Landscape.webp',
-      mobile: '/images/True-North-Promo-1.webp'
+      mobile: '/images/True-North-Summer.webp'
     },
     {
       desktop: '/images/True-North-Summer-Landscape.webp',
