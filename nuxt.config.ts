@@ -12,6 +12,6 @@ export default defineNuxtConfig({
   },*/
   runtimeConfig: {
     jsonbinBinId: process.env.JSONBIN_BIN_ID || '',
-    jsonbinMasterKey: process.env.JSONBIN_MASTER_KEY || '',
+    jsonbinAccessKey: process.env.JSONBIN_ACCESS_KEY || '',
   },
 });

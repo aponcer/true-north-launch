@@ -1,10 +1,10 @@
 // server/routes/api/site-data.get.ts
 import { siteData as fallbackData } from '~/data/siteData'
 
-export default defineEventHandler(async () => {
+export default defineCachedEventHandler(async () => {
   const config = useRuntimeConfig()
 
-  if (!config.jsonbinBinId || !config.jsonbinMasterKey) {
+  if (!config.jsonbinBinId || !config.jsonbinAccessKey) {
     return fallbackData
   }
 
@@ -13,7 +13,7 @@ export default defineEventHandler(async () => {
       `https://api.jsonbin.io/v3/b/${config.jsonbinBinId}/latest`,
       {
         headers: {
-          'X-Master-Key': config.jsonbinMasterKey
+          'X-Access-Key': config.jsonbinAccessKey
         }
       }
     )
@@ -21,4 +21,6 @@ export default defineEventHandler(async () => {
   } catch (error) {
     return fallbackData
   }
+}, {
+  maxAge: 60 * 60,
 })
