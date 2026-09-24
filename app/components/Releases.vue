@@ -23,8 +23,8 @@
             title="Click to watch Lyric Video"
           >
             <img 
-              src="/images/true-north-cover.jpg" 
-              alt="True North Single Cover" 
+              src="/images/healing-cover.webp" 
+              alt="Healing Single Cover" 
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               @error="handleImageError"
             />
