@@ -4,6 +4,7 @@
     <Navbar />
     <Hero />
     <Releases />
+    <Shows />
     <AboutUs />
     <Footer />
   </div>

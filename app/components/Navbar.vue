@@ -14,6 +14,7 @@
       <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-neutral-300">
         <a href="#home" class="hover:text-rose-300 transition-colors">Home</a>
         <a href="#releases" class="hover:text-rose-300 transition-colors">Releases</a>
+        <a href="#shows" class="hover:text-rose-300 transition-colors">Shows</a>
         <a href="#about" class="hover:text-rose-300 transition-colors">About Us</a>
       </nav>
 

@@ -1,18 +1,18 @@
 <!-- components/Releases.vue -->
 <template>
-  <section id="releases" class="py-16 bg-white border-t border-neutral-100">
+  <section id="releases" class="py-16 bg-neutral-900 text-white">
     <div class="max-w-4xl mx-auto px-6 space-y-8">
       <div class="text-center">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-rose-500 mb-2">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-rose-400 mb-2">
           Latest Release
         </h2>
-        <h3 class="text-3xl font-extrabold text-neutral-900">
+        <h3 class="text-3xl font-extrabold text-white">
           Stream & Listen
         </h3>
       </div>
 
       <!-- Single Card Container -->
-      <div class="bg-neutral-50 rounded-2xl border border-neutral-200/60 shadow-sm overflow-hidden min-h-[220px] flex flex-col md:flex-row">
+      <div class="bg-neutral-950 rounded-2xl border border-white/10 shadow-sm overflow-hidden min-h-55 flex flex-col md:flex-row">
         
         <!-- STATE A: Normal Card (Image + Streaming Links) -->
         <template v-if="!showPlayer">
@@ -46,10 +46,10 @@
               <span class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">
                 {{ siteData.latestRelease.type }} • {{ siteData.latestRelease.year }}
               </span>
-              <h4 class="text-2xl font-bold text-neutral-900">
+              <h4 class="text-2xl font-bold text-white">
                 {{ siteData.latestRelease.title }}
               </h4>
-              <p class="text-sm text-neutral-500 mt-1">Available now on all major streaming platforms.</p>
+              <p class="text-sm text-neutral-400 mt-1">Available now on all major streaming platforms.</p>
             </div>
 
             <!-- Streaming Buttons with SVG Icons -->
