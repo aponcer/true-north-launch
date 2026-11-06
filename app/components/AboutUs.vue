@@ -25,13 +25,13 @@
           <div class="h-80 w-full overflow-hidden bg-neutral-900 relative">
             <img 
               src="/images/nina_1.webp" 
-              alt="Nina - Vocals & Composition" 
+              alt="Nina Catari - Vocals & Composition"
               class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             />
             <div class="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-4 left-6">
               <span class="text-xs font-bold uppercase tracking-widest text-rose-400">Vocals & Composition</span>
-              <h3 class="text-2xl font-black text-white">Nina</h3>
+              <h3 class="text-2xl font-black text-white">Nina Catari</h3>
             </div>
           </div>
           <!-- Bio Info -->
