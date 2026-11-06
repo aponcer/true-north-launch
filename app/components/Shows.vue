@@ -37,8 +37,15 @@
           data-bit-logo-color="rgba(244,63,94,1)"
         ></a>
       </div>
-      <div v-else class="h-40 flex items-center justify-center text-neutral-400 text-sm">
-        Loading shows…
+      <div v-else class="h-40 flex items-center justify-center">
+        <a
+          href="https://www.bandsintown.com/a/15644709-true-north"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-neutral-500 text-sm hover:text-rose-500 transition-colors"
+        >
+          See all upcoming dates on Bandsintown →
+        </a>
       </div>
     </div>
   </section>

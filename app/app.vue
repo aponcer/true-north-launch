@@ -42,7 +42,10 @@ const musicGroupSchema = {
   '@context': 'https://schema.org',
   '@type': 'MusicGroup',
   name: siteData.artistName,
+  alternateName: `${siteData.artistName} Duo`,
+  description: `${siteData.artistName} is a faith-driven Christian music duo from ${siteData.location}.`,
   url: canonicalUrl,
+  logo: `${requestUrl.origin}/images/logo-tn.webp`,
   image: ogImageUrl,
   genre: ['Christian Music', 'Gospel', 'Pop'],
   foundingDate: String(siteData.yearStarted),
@@ -50,19 +53,32 @@ const musicGroupSchema = {
     '@type': 'Place',
     name: siteData.location,
   },
+  // OrganizationRole es la forma correcta en schema.org de asociar un
+  // roleName a un member (Person no tiene roleName propio).
   member: [
-    { '@type': 'Person', name: 'Nina Catari', roleName: 'Vocals & Composition' },
-    { '@type': 'Person', name: 'Frank Morgan', roleName: 'Songwriter & Educator' },
+    {
+      '@type': 'OrganizationRole',
+      roleName: 'Vocals & Composition',
+      member: { '@type': 'Person', name: 'Nina Catari' },
+    },
+    {
+      '@type': 'OrganizationRole',
+      roleName: 'Songwriter & Educator',
+      member: { '@type': 'Person', name: 'Frank Morgan' },
+    },
   ],
   award: [
     'German Adventjugend Song Contest — 1st Place',
-    "EUD Vision Song Contest — Germany's entry",
+    'EUD Vision Song Contest — Winner',
   ],
   sameAs: [
     siteData.socials.instagram,
     siteData.socials.tiktok,
     siteData.socials.youtube,
     siteData.socials.facebook,
+    'https://www.bandsintown.com/a/15644709-true-north',
+    'https://open.spotify.com/artist/23yFNjBurTG9OdprDpqZjS',
+    'https://music.apple.com/de/artist/true-north/1895142220?l=en-GB',
   ],
 }
 

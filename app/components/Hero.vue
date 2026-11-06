@@ -12,9 +12,9 @@
         <picture>
           <source media="(max-width: 767px)" :srcset="image.mobile" />
           <source media="(min-width: 768px)" :srcset="image.desktop" />
-          <img 
-            :src="image.desktop" 
-            alt="True North Band Cover" 
+          <img
+            :src="image.desktop"
+            :alt="image.alt"
             class="w-full h-full object-cover object-top"
           />
         </picture>
@@ -105,11 +105,13 @@
   const bgImages = [
     {
       desktop: '/images/True-North-Promo-Landscape.webp',
-      mobile: '/images/True-North-Summer.webp'
+      mobile: '/images/True-North-Summer.webp',
+      alt: 'True North Duo — promotional photo'
     },
     {
       desktop: '/images/True-North-Summer-Landscape.webp',
-      mobile: '/images/True-North-Summer.webp'
+      mobile: '/images/True-North-Summer.webp',
+      alt: 'True North Duo — summer photo'
     }
   ]
 
