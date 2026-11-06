@@ -106,12 +106,12 @@
     {
       desktop: '/images/True-North-Promo-Landscape.webp',
       mobile: '/images/True-North-Summer.webp',
-      alt: 'True North Duo — promotional photo'
+      alt: `${siteData.artistName} — promotional photo`
     },
     {
       desktop: '/images/True-North-Summer-Landscape.webp',
       mobile: '/images/True-North-Summer.webp',
-      alt: 'True North Duo — summer photo'
+      alt: `${siteData.artistName} — summer photo`
     }
   ]
 
