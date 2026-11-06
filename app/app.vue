@@ -36,6 +36,36 @@ useSeoMeta({
   twitterImage: ogImageUrl,
 })
 
+// Datos estructurados (schema.org/MusicGroup) para que Google reconozca
+// a la banda como entidad propia y la distinga de otros "True North".
+const musicGroupSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicGroup',
+  name: siteData.artistName,
+  url: canonicalUrl,
+  image: ogImageUrl,
+  genre: ['Christian Music', 'Gospel', 'Pop'],
+  foundingDate: String(siteData.yearStarted),
+  foundingLocation: {
+    '@type': 'Place',
+    name: siteData.location,
+  },
+  member: [
+    { '@type': 'Person', name: 'Nina Catari', roleName: 'Vocals & Composition' },
+    { '@type': 'Person', name: 'Frank Morgan', roleName: 'Songwriter & Educator' },
+  ],
+  award: [
+    'German Adventjugend Song Contest — 1st Place',
+    "EUD Vision Song Contest — Germany's entry",
+  ],
+  sameAs: [
+    siteData.socials.instagram,
+    siteData.socials.tiktok,
+    siteData.socials.youtube,
+    siteData.socials.facebook,
+  ],
+}
+
 useHead({
   htmlAttrs: {
     lang: 'en'
@@ -43,6 +73,12 @@ useHead({
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     { rel: 'canonical', href: canonicalUrl }
-  ]
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(musicGroupSchema),
+    },
+  ],
 })
 </script>

@@ -28,7 +28,7 @@
               alt="Nina - Vocals & Composition" 
               class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-4 left-6">
               <span class="text-xs font-bold uppercase tracking-widest text-rose-400">Vocals & Composition</span>
               <h3 class="text-2xl font-black text-white">Nina</h3>
@@ -55,7 +55,7 @@
               alt="Frank Morgan - Songwriter & Educator" 
               class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-4 left-6">
               <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Songwriter & Educator</span>
               <h3 class="text-2xl font-black text-white">Frank Morgan</h3>
