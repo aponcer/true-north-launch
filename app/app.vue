@@ -22,7 +22,7 @@ useSeoMeta({
   title: `${siteData.artistName} | ${siteData.tagline}`,
   ogTitle: `${siteData.artistName} | ${siteData.tagline}`,
   ogSiteName: siteData.artistName,
-  description: 'True North is a faith-driven duo blending soulful melodies, lush harmonies, and honest storytelling. Stream their latest single "True North" now.',
+  description: `${siteData.artistName} is a faith-driven duo blending soulful melodies, lush harmonies, and honest storytelling. Stream their latest ${siteData.latestRelease.type.toLowerCase()} "${siteData.latestRelease.title}" now.`,
   ogDescription: 'We create soulful, faith-inspired music that connects, uplifts, and reminds you that you\'re never too far gone to find your way home.',
   ogImage: ogImageUrl,
   ogImageWidth: 1200,
@@ -32,7 +32,7 @@ useSeoMeta({
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: `${siteData.artistName} | ${siteData.tagline}`,
-  twitterDescription: `Faith-driven music from ${siteData.location}. Stream "True North" on Spotify, Apple Music, and YouTube.`,
+  twitterDescription: `Faith-driven music from ${siteData.location}. Stream "${siteData.latestRelease.title}" on Spotify, Apple Music, and YouTube.`,
   twitterImage: ogImageUrl,
 })
 
