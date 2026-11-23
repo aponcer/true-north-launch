@@ -23,8 +23,8 @@
             title="Click to watch Lyric Video"
           >
             <img 
-              src="/images/healing-cover.webp" 
-              alt="Healing Single Cover" 
+              src="/images/immanuel-cover.webp" 
+              alt="Immanuel Single Cover" 
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               @error="handleImageError"
             />
@@ -108,7 +108,7 @@
           <iframe 
             class="w-full h-full"
             :src="`https://www.youtube.com/embed/${siteData.latestRelease.lyricVideoId}?autoplay=1`" 
-            title="True North - True North (Official Lyric Video)" 
+            title="True North - Immanuel (Official Lyric Video)" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen
